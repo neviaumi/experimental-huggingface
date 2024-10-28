@@ -1,0 +1,16 @@
+[project]
+name = "experimental-huggingface"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "David Ng", email = "david.ng.dev@gmail.com"},
+]
+dependencies = [
+    "huggingface-hub[cli]>=0.26.1",
+]
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "MIT"}
+
+[tool.pdm]
+distribution = false
