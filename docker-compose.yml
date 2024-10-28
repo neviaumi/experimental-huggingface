@@ -9,5 +9,15 @@ services:
       - LLAMA_CPP_PORT=8080
       - LLAMA_ARG_CTX_SIZE=8192
       - LLAMA_ARG_N_PREDICT=65536
+  llm-agent:
+    build:
+      dockerfile: Dockerfile
+    command: ./scripts/docker/start.sh
+    entrypoint: /bin/sh
+    depends_on:
+      - llama.cpp
+    environment:
+      - LLM_PORT=8000
+      - LLM_LLAMA_HOST=http://llama.cpp:8080
     ports:
-      - "8080:8080"
+      - "8000:8000"

@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
 set -ex
-apt-get update
-apt-get install -y git
-pdm install --no-isolation
+pip install -U pdm
+pdm install
