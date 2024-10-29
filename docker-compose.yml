@@ -4,10 +4,7 @@ services:
       dockerfile: Dockerfile
     command: ./scripts/docker/start.sh
     entrypoint: /bin/sh
-    depends_on:
-      - llama.cpp
     environment:
       - LLM_PORT=8000
-      - LLM_LLAMA_HOST=http://llama.cpp:8080
     ports:
       - "8000:8000"
