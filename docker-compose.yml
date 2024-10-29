@@ -1,15 +1,5 @@
 services:
-  llama.cpp:
-    build:
-      context: ./llama.cpp
-      dockerfile: Dockerfile
-    command: ./scripts/docker/start.sh
-    entrypoint: /bin/sh
-    environment:
-      - LLAMA_CPP_PORT=8080
-      - LLAMA_ARG_CTX_SIZE=8192
-      - LLAMA_ARG_N_PREDICT=65536
-  llm-agent:
+  api:
     build:
       dockerfile: Dockerfile
     command: ./scripts/docker/start.sh

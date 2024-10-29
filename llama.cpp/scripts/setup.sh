@@ -1,2 +1,0 @@
-pdm install
-pdm run huggingface-cli download bartowski/Phi-3.5-mini-instruct-GGUF --include "Phi-3.5-mini-instruct-Q4_K_M.gguf" --local-dir ./.model
